@@ -65,7 +65,7 @@ Blurb
 
 ## Figure 4
 
-Blurb
+Historgram values obtained from scripts for Figure 6, Figure 7, and Figure 8.
 
 ## Figure 5
 
