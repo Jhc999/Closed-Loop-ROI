@@ -39,8 +39,8 @@ This repository provides the code to replicate all the demos and figures in the 
 
 ## Notes
 
-* For the demos of streaming methods OpenMV scripts should be flashed directly onto the OpenMV. 
-* For reproducing figures from the paper, the serial port should be connected to the OpenMV IDE on an external PC. Data for the figures is printed directly to the serial port and read by the IDE to later be plotted.
+* For reproducing figures from the paper, the serial port should be connected to the OpenMV IDE on an external PC. Data for the figures is printed directly to the serial port and read by the IDE to later be plotted. 
+* For the demos of streaming methods OpenMV, the serial port connection is not necessary, and scripts can be flashed directly onto the OpenMV. However, the serial port connection will display the captured images in the OpenMV IDE without the need to save the images (which reduces the FPS).
 * After running a script once that requires a wireless connection, the TCP socket will be blocked. The socket can usually be cleared by running ClearSocket.py. If this does not work, the port numbers for the TCP socket must be changed inside the scripts.
 
 ## Default Streaming Method
