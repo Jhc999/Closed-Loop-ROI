@@ -80,8 +80,4 @@ Blurb
 
 Blurb
 
-## Figure Plotting
-
-Blurb
-
 
