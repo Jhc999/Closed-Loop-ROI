@@ -2,7 +2,7 @@
 
 Paper in NAME: LINK
 
-Authors
+Authors: NAMES 
 
 Publication Date: DATE
 
