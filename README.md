@@ -20,7 +20,7 @@ This repository provides the code to replicate all the demos and figures in the 
 
 ## Dependencies
 1. Python-3.6
-2. Nvidia-jetpack Version 4.4.1-b50
+2. Nvidia-jetpack-4.4.1-b50
 3. Opencv-3.4.6
 4. Tensorflow-1.12.2
 5. Protobuf-3.8.0
