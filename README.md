@@ -6,7 +6,7 @@ Supplementary Video: https://youtu.be/OYW2WF3mKDA
 
 This repository provides the code to replicate all the demos and figures in the paper.
 
-## Setup:
+## Setup
 1. Nvidia Jetson AGX Xavier
 2. OpenMV H7 Plus camera 
 3. OpenMV Wifi shield 
