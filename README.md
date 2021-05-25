@@ -1,6 +1,6 @@
 # Closed-loop Region of Interest Enabling High Spatial and Temporal Resolutions in Object Detection and Tracking via Wireless Camera
 
-Paper in IEEE Access, Volume #, 2021: LINK
+Journal Paper in IEEE Access, Volume #, 2021: LINK
 
 Supplementary Video: https://youtu.be/OYW2WF3mKDA
 
