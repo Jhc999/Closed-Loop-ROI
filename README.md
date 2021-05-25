@@ -2,6 +2,14 @@
 
 Journal Paper in IEEE Access, Volume #, 2021: LINK
 
+Authors: Jack Chen<sup>*1,2</sup>, Hen-Wei Huang<sup>*1,3,4</sup>, Philipp Rupp<sup>1,5</sup>, Anjali Sinha<sup>4</sup>, Claas Ehmke<sup>3</sup>, and Giovanni Traverso<sup1,4</sup>
+<sup>1</sup> Division of Gastroenterology, Brigham & Women’s Hospital, Harvard Medical School
+<sup>2</sup> Department of Engineering Science, University of Toronto
+<sup>3</sup> The Koch Institute for Integrative Cancer Research, Massachusetts Institute of Technology
+<sup>4</sup> Department of Mechanical Engineering, Massachusetts Institute of Technology
+<sup>5</sup> Department of Information Technology and Electrical Engineering, ETH Zürich
+<sup>*</sup> These authors contributed equally.
+
 Supplementary Video: https://youtu.be/OYW2WF3mKDA
 
 This repository provides the code to replicate all the demos and figures in the paper.
