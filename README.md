@@ -2,8 +2,6 @@
 
 Paper in NAME: LINK
 
-Authors: NAMES 
-
 Publication Date: DATE
 
 This repository provides the code to replicate all the demos and figures in the paper.
