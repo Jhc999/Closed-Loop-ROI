@@ -69,11 +69,11 @@ Historgram values obtained from scripts for Figure 6, Figure 7, and Figure 8.
 
 ## Figure 5
 
-Blurb
+Connect the OpenMV to the OpenMV IDE over serial. Run Fig5_Part1.py (for resolultions below SVGA) and Fig5_Part2.py (for resolutions above SVGA) to generate data to be plotted.
 
 ## Figure 6 
 
-Blurb
+Connect the OpenMV to the OpenMV IDE over serial. Run Fig6.py to generate data to be plotted.
 
 ## Figure 7
 
@@ -84,6 +84,10 @@ Blurb
 Blurb
 
 ## Figure 9
+
+Blurb
+
+## Plotting Figures
 
 Blurb
 
