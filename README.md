@@ -41,27 +41,33 @@ This repository provides the code to replicate all the demos and figures in the 
 
 * For reproducing figures from the paper, the serial port should be connected to the OpenMV IDE on an external PC. Data for the figures is printed directly to the serial port and read by the IDE to later be plotted. 
 * For the demos of streaming methods OpenMV, the serial port connection is not necessary, and scripts can be flashed directly onto the OpenMV. However, the serial port connection will display the captured images in the OpenMV IDE without the need to save the images (which reduces the FPS).
-* After running a script once that requires a wireless connection, the TCP socket will be blocked. The socket can usually be cleared by running ClearSocket.py. If this does not work, the port numbers for the TCP socket must be changed inside the scripts.
+* After running a script once that requires a wireless connection, the TCP socket will be blocked. The socket can usually be cleared by running ClearPort.py. If this does not work, the port numbers for the TCP socket must be changed inside the scripts.
 
 ## Default Streaming Method
 
-Blurb
+DefaultServer.py 
+DefaultClient.py
 
 ## Pan & Tilt Method
 
-Blurb
+PanTiltServer.py
+PanTiltClient.py
+ServoControl.ino
 
 ## Closed-Loop ROI for Single Object
 
-Blurb
+ROISingleServer.py
+ROISingleClient.py
 
 ## Closed-Loop ROI for Multiple Objects
 
-Blurb
+ROIMultiServer.py
+ROIMultiClient.py
 
 ## Figure 1
 
-Blurb
+Fig1_Default.py
+Fig1_ROI.py
 
 ## Figure 4
 
@@ -69,26 +75,32 @@ Historgram values obtained from scripts for Figure 6, Figure 7, and Figure 8.
 
 ## Figure 5
 
-Connect the OpenMV to the OpenMV IDE over serial. Run Fig5_Part1.py (for resolultions below SVGA) and Fig5_Part2.py (for resolutions above SVGA) to generate data to be plotted.
+* Connect the OpenMV to the OpenMV IDE over serial.
+* Run Fig5_Part1.py (for resolultions below SVGA) and Fig5_Part2.py (for resolutions above SVGA) to generate data to be plotted.
 
 ## Figure 6 
 
-Connect the OpenMV to the OpenMV IDE over serial. Run Fig6.py to generate data to be plotted.
+* Connect the OpenMV to the OpenMV IDE over serial. Run Fig6.py to generate data to be plotted.
 
 ## Figure 7
 
-Blurb
+Fig7_Server.py
+Fig7_Client.py
 
 ## Figure 8
 
-Blurb
+Fig8_MobileNet.py
+Fig8_MTCNN.py
+Fig8_YOLOV4.py
 
 ## Figure 9
 
-Blurb
+Record videos using the demo code, save videos, process videos with 
+Must adjust RGB limits based on lighting and blob color
+Fig9_Processing.py (ColorTrack.py)
 
 ## Plotting Figures
 
-Blurb
+The FigurePlot.ipynb notebook contains the raw data used to plot all figures in the paper. The data outputs of the previous scripts have been cleaned up into the appropriate format for the notebook.
 
 
