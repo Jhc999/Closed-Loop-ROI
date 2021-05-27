@@ -45,33 +45,37 @@ This repository provides the code to replicate all the demos and figures in the 
 
 ## Default Streaming Method
 
-`DefaultServer.py`
-`DefaultClient.py`
+* Enter the SSID, password, and IP address of the Jetson to `DefaultServer.py`. 
+* Run `DefaultServer.py` first, then run `DefaultClient.py` either by flashing directly to the OpenMV or by connecting the OpenMV to the IDE.
+* Note that displaying the video stream on `DefaultServer.py` will reduce the FPS of the video.
 
 ## Pan & Tilt Method
 
-`PanTiltServer.py`
-`PanTiltClient.py`
-`ServoControl.ino`
+* Upload `ServoControl.ino` to the Arduino Uno. Connect pins between the OpenMV and Arduino listed in `PanTiltClient.py`. 
+* Enter the SSID, password, and IP address of the Jetson to `PanTiltServer.py`. 
+* Run `PanTiltClient.py` first, then run `PanTiltServer.py` either by flashing directly to the OpenMV or by connecting the OpenMV to the IDE. 
+* Note that displaying the video stream on `DefaultServer.py` will reduce the FPS of the video.
 
 ## Closed-Loop ROI for Single Object
 
-`ROISingleServer.py`
-`ROISingleClient.py`
+* Enter the SSID, password, and IP address of the Jetson to `ROISingleServer.py`. 
+* Run `ROISingleClient.py` first, then run `ROISingleServer.py` either by flashing directly to the OpenMV or by connecting the OpenMV to the IDE. 
+* Note that displaying the video stream on `ROISingleServer.py` will reduce the FPS of the video.
 
 ## Closed-Loop ROI for Multiple Objects
 
-`ROIMultiServer.py`
-`ROIMultiClient.py`
+* Enter the SSID, password, and IP address of the Jetson to `ROISingleServer.py`. 
+* Run `ROIMultiClient.py` first, then run `ROIMultiServer.py` either by flashing directly to the OpenMV or by connecting the OpenMV to the IDE. 
+* Note that displaying the video stream on `ROIMultiServer.py` will reduce the FPS of the video.
 
 ## Figure 1
 
-`Fig1_Default.py`
-`Fig1_ROI.py`
+* `Fig1_Default_Client.py` and `Fig1_Default_Server.py` should be run similarly to the demo code for Default Streaming Method.
+* `Fig1_ROI_Client.py` and `Fig1_ROI_Server.py` should be run similarly to the demo code for Closed-Loop ROI for Single Object.
 
 ## Figure 4
 
-Historgram values obtained from scripts for Figure 6, Figure 7, and Figure 8.
+* Histogram values are obtained from scripts for Figure 6, Figure 7, and Figure 8.
 
 ## Figure 5
 
@@ -84,24 +88,25 @@ Historgram values obtained from scripts for Figure 6, Figure 7, and Figure 8.
 
 ## Figure 7
 
-`Fig7_Server.py`
-`Fig7_Client.py`
+* Enter the SSID, password, and IP address of the Jetson or external PC to `Fig7_Server.py`. 
+* Run `Fig7_Server.py` first, then run `Fig7_Client.py` either by flashing directly to the OpenMV or by connecting the OpenMV to the IDE. 
 
 ## Figure 8
 
-`Fig8_MobileNet.py`
-`Fig8_MTCNN.py`
-`Fig8_YOLOV4.py`
+* The model weights are available at: LINK. 
+* For face detection with MobileNet, run `Fig8_MobileNet.py` on the Jetson. Download the weights file and place into: 'Directory'.
+* For face detection with MTCNN, run `Fig8_MTCNN.py` on the Jetson. Download the weights file and place into: 'Directory'.
+For face detection with MobileNet, run `Fig8_YoloV4.py` on the Jetson. Download the weights file and place into: 'Directory'.
 
 ## Figure 9
 
-Record videos using the demo code, save videos, process videos with 
-Must adjust RGB limits based on lighting and blob color
-`Fig9_Processing.py` (ColorTrack.py)
+* Record videos using the demo code, replacing the face detector with a color blob detector. 
+* Process the videos using `Fig9_Processing.py`.
 
 ## Plotting Figures
 
-The `FigurePlot.ipynb` notebook contains the raw data used to plot all figures in the paper. The data outputs of the previous scripts have been cleaned up into the appropriate format for the notebook.
+* The `FigurePlot.ipynb` notebook contains the raw data used to plot all figures in the paper. 
+* The data outputs of the previous scripts have been cleaned up into the appropriate format for the notebook.
 
 ## Helper Scripts
 
