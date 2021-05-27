@@ -45,29 +45,29 @@ This repository provides the code to replicate all the demos and figures in the 
 
 ## Default Streaming Method
 
-DefaultServer.py 
-DefaultClient.py
+`DefaultServer.py`
+`DefaultClient.py`
 
 ## Pan & Tilt Method
 
-PanTiltServer.py
-PanTiltClient.py
-ServoControl.ino
+`PanTiltServer.py`
+`PanTiltClient.py`
+`ServoControl.ino`
 
 ## Closed-Loop ROI for Single Object
 
-ROISingleServer.py
-ROISingleClient.py
+`ROISingleServer.py`
+`ROISingleClient.py`
 
 ## Closed-Loop ROI for Multiple Objects
 
-ROIMultiServer.py
-ROIMultiClient.py
+`ROIMultiServer.py`
+`ROIMultiClient.py`
 
 ## Figure 1
 
-Fig1_Default.py
-Fig1_ROI.py
+`Fig1_Default.py`
+`Fig1_ROI.py`
 
 ## Figure 4
 
@@ -76,33 +76,35 @@ Historgram values obtained from scripts for Figure 6, Figure 7, and Figure 8.
 ## Figure 5
 
 * Connect the OpenMV to the OpenMV IDE over serial.
-* Run Fig5_Part1.py (for resolultions below SVGA) and Fig5_Part2.py (for resolutions above SVGA) to generate data to be plotted.
+* Run `Fig5_Part1.py` (for resolultions below SVGA) and `Fig5_Part2.py` (for resolutions above SVGA) to generate data to be plotted.
 
 ## Figure 6 
 
-* Connect the OpenMV to the OpenMV IDE over serial. Run Fig6.py to generate data to be plotted.
+* Connect the OpenMV to the OpenMV IDE over serial. Run `Fig6.py` to generate data to be plotted.
 
 ## Figure 7
 
-Fig7_Server.py
-Fig7_Client.py
+`Fig7_Server.py`
+`Fig7_Client.py`
 
 ## Figure 8
 
-Fig8_MobileNet.py
-Fig8_MTCNN.py
-Fig8_YOLOV4.py
+`Fig8_MobileNet.py`
+`Fig8_MTCNN.py`
+`Fig8_YOLOV4.py`
 
 ## Figure 9
 
 Record videos using the demo code, save videos, process videos with 
 Must adjust RGB limits based on lighting and blob color
-Fig9_Processing.py (ColorTrack.py)
+`Fig9_Processing.py` (ColorTrack.py)
 
 ## Plotting Figures
 
-The FigurePlot.ipynb notebook contains the raw data used to plot all figures in the paper. The data outputs of the previous scripts have been cleaned up into the appropriate format for the notebook.
+The `FigurePlot.ipynb` notebook contains the raw data used to plot all figures in the paper. The data outputs of the previous scripts have been cleaned up into the appropriate format for the notebook.
 
 ## Helper Scripts
 
-* `Convert_frames_to_video.py` converts
+* `ClearPorts.py` clears an open port. Ports may be blocked after running a script that opens a TCP connection.
+* `Convert_frames_to_video.py` converts frames saved by demo files into videos.
+* `Data_cleaning.iynb` cleans data outputs from the figure scripts for plotting
