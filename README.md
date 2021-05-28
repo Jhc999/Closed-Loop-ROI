@@ -93,10 +93,10 @@ This repository provides the code to replicate all the demos and figures in the 
 
 ## Figure 8
 
-* The model weights are available at: LINK. 
-* For face detection with MobileNet, run `Fig8_MobileNet.py` on the Jetson. Download the weights file and place into: 'Directory'.
-* For face detection with MTCNN, run `Fig8_MTCNN.py` on the Jetson. Download the weights file and place into: 'Directory'.
-For face detection with MobileNet, run `Fig8_YoloV4.py` on the Jetson. Download the weights file and place into: 'Directory'.
+* The model weights are available at: https://github.com/jkjung-avt/tensorrt_demos. 
+* For face detection with MobileNet, run `Fig8_MobileNet.py` on the Jetson. Download `NAME` and place into: 'Directory'.
+* For face detection with MTCNN, run `Fig8_MTCNN.py` on the Jetson. Download `NAME` and place into: 'Directory'.
+For face detection with MobileNet, run `Fig8_YoloV4.py` on the Jetson. Download `NAME` and place into: 'Directory'.
 
 ## Figure 9
 
