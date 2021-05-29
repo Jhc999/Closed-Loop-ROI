@@ -47,14 +47,14 @@ This repository provides the code to replicate all the demos and figures in the 
 
 * Enter the SSID, password, and IP address of the Jetson to `DefaultServer.py`. 
 * Run `DefaultServer.py` first, then run `DefaultClient.py` either by flashing directly to the OpenMV or by connecting the OpenMV to the IDE.
-* Note that displaying the video stream on `DefaultServer.py` will reduce the FPS of the video.
+* Note that displaying the video stream on `ROISingleServer.py` will reduce the FPS of the video.
 
 ## Pan & Tilt Method
 
 * Upload `ServoControl.ino` to the Arduino Uno. Connect pins between the OpenMV and Arduino listed in `PanTiltClient.py`. 
 * Enter the SSID, password, and IP address of the Jetson to `PanTiltServer.py`. 
 * Run `PanTiltClient.py` first, then run `PanTiltServer.py` either by flashing directly to the OpenMV or by connecting the OpenMV to the IDE. 
-* Note that displaying the video stream on `DefaultServer.py` will reduce the FPS of the video.
+* Note that displaying the video stream on `PanTiltServer.py` will reduce the FPS of the video.
 
 ## Closed-Loop ROI for Single Object
 
@@ -64,7 +64,7 @@ This repository provides the code to replicate all the demos and figures in the 
 
 ## Closed-Loop ROI for Multiple Objects
 
-* Enter the SSID, password, and IP address of the Jetson to `ROISingleServer.py`. 
+* Enter the SSID, password, and IP address of the Jetson to `ROIMultiServer.py`. 
 * Run `ROIMultiClient.py` first, then run `ROIMultiServer.py` either by flashing directly to the OpenMV or by connecting the OpenMV to the IDE. 
 * Note that displaying the video stream on `ROIMultiServer.py` will reduce the FPS of the video.
 
@@ -100,7 +100,9 @@ For face detection with MobileNet, run `Fig8_YoloV4.py` on the Jetson. Download 
 
 ## Figure 9
 
-* Record videos using the demo code, replacing the face detector with a color blob detector. 
+* For the ground truth, record the video of the full frame with the OpenMV IDE at VGA.
+* For the default method, follow the same steps as the default demo. However, use `DefaultClient.py` with `Color_Server_Default.py`.
+* For the ROI method, follow the same steps as the single ROI demo. However, change the ROI dimension in `ROISingleClient.py` from 400x150 pixels to 200x200 and  use with `ROISingleServer.py`. 
 * Process the videos using `Fig9_Processing.py`.
 
 ## Plotting Figures
