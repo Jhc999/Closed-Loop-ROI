@@ -70,8 +70,8 @@ This repository provides the code to replicate all the demos and figures in the 
 
 ## Figure 1
 
-* `Fig1_Default_Client.py` and `Fig1_Default_Server.py` should be run similarly to the demo code for Default Streaming Method.
-* `Fig1_ROI_Client.py` and `Fig1_ROI_Server.py` should be run similarly to the demo code for Closed-Loop ROI for Single Object.
+* Figure 1 is generated using the demo codes for Default Streaming Method and for Closed-Loop ROI for Single Object. 
+* The ROI dimensions should be changed to 200x150 pixels and a face or picture of a face should remain within the camera's field of view at all times.
 
 ## Figure 4
 
