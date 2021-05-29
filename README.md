@@ -88,15 +88,15 @@ This repository provides the code to replicate all the demos and figures in the 
 
 ## Figure 7
 
-* Enter the SSID, password, and IP address of the Jetson or external PC to `Fig7_Server.py`. 
-* Run `Fig7_Server.py` first, then run `Fig7_Client.py` either by flashing directly to the OpenMV or by connecting the OpenMV to the IDE. 
+* For Wifi data transmission, enter the SSID, password, and IP address of the Jetson or external PC to `Fig7_Server.py`. Set the JPEG quality factor. Run `Fig7_Server.py` first. Then, run `Fig7_Client.py` either by flashing directly to the OpenMV or by connecting the OpenMV to the IDE. 
+* For USB data transmission, use the `USB_vcp.py` script from the OpenMV. However, use the `utime` module instead of the `time` module.
 
 ## Figure 8
 
 * The model weights are available at: https://github.com/jkjung-avt/tensorrt_demos. 
-* For face detection with MobileNet, run `Fig8_MobileNet.py` on the Jetson. Download `NAME` and place into: 'Directory'.
-* For face detection with MTCNN, run `Fig8_MTCNN.py` on the Jetson. Download `NAME` and place into: 'Directory'.
-For face detection with MobileNet, run `Fig8_YoloV4.py` on the Jetson. Download `NAME` and place into: 'Directory'.
+* For face detection with MobileNet, run `Fig8_MobileNet.py` on the Jetson. Download `NAME` and place into `Directory`.
+* For face detection with MTCNN, run `Fig8_MTCNN.py` on the Jetson. Download `NAME` and place into `Directory`.
+For face detection with MobileNet, run `Fig8_YoloV4.py` on the Jetson. Download `NAME` and place into `Directory`.
 
 ## Figure 9
 
