@@ -1,6 +1,9 @@
 import sensor, image, utime
 
-#Every period: reconfigure subwindow and reconfigure ioctl
+#Set one period at a time
+period = [0.01]
+
+#period = [float("inf"), 0.5, 0.1, 0.01]
 
 ResKey = {}
 ResKey["SVGA"]  = [sensor.SVGA ,800, 600]
@@ -14,11 +17,8 @@ ResKey["QXGA"]  = [sensor.QXGA ,2048, 1536]
 ResKey["WQXGA"] = [sensor.WQXGA ,2560, 1600]
 ResKey["WQXGA2"]= [sensor.WQXGA2 ,2592, 1944]
 
-period = [float("inf"), 0.5, 0.1, 0.01]
-#period = [0.01]
-
 NUM_IMAGES = 100
-NUM_TESTS = 2
+NUM_TESTS = 10
 
 for key in ResKey:
     s_format, W, H = ResKey[key][0], ResKey[key][1], ResKey[key][2]
@@ -58,7 +58,3 @@ for key in ResKey:
             OUT.append(BIGEND-BIGSTART)
         print(OUT)
 
-#ResKey["QQVGA"] = [sensor.QQVGA ,160, 120]
-#ResKey["HQVGA"] = [sensor.HQVGA ,240, 160]
-#ResKey["QVGA"]  = [sensor.QVGA ,320, 240]
-#ResKey["VGA"]   = [sensor.VGA ,640, 480]

@@ -39,7 +39,7 @@ This repository provides the code to replicate all the demos and figures in the 
 
 ## Notes
 
-* The model weights are available at DROPBOX LINK. For MobileNet, download `NAME` and place into `Directory`. For MTCNN, download `NAME` and place into `Directory`. For YoloV4, fownload `NAME` and place into `Directory`.
+* The model weights are available upon request. For MobileNet, download `NAME` and place into `Directory`. For MTCNN, download `NAME` and place into `Directory`. For YoloV4, fownload `NAME` and place into `Directory`.
 * For reproducing figures from the paper, the serial port should be connected to the OpenMV IDE on an external PC. Data for the figures is printed directly to the serial port and read by the IDE to later be plotted. 
 * For the demos of streaming methods OpenMV, the serial port connection is not necessary, and scripts can be flashed directly onto the OpenMV. However, the serial port connection will display the captured images in the OpenMV IDE without the need to save the images (which reduces the FPS).
 * After running a script once that requires a wireless connection, the TCP socket will be blocked. The socket can usually be cleared by running ClearPort.py. If this does not work, the port numbers for the TCP socket must be changed inside the scripts.
@@ -85,7 +85,8 @@ This repository provides the code to replicate all the demos and figures in the 
 
 ## Figure 6 
 
-* Connect the OpenMV to the OpenMV IDE over serial. Run `Fig6.py` to generate data to be plotted.
+* Connect the OpenMV to the OpenMV IDE over serial. 
+* Run `Fig6.py` to generate data to be plotted.
 
 ## Figure 7
 

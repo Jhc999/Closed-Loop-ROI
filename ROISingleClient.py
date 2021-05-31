@@ -33,15 +33,15 @@ def MVread(str_in):     #READ CONFIG MESSAGE SENT BY PC
 ########################################################################
 
 def mainf(PORT1):
-    SSID ='TELUS3061'     # Network SSID
-    KEY  ='m2gbx75frq'     # Network key
+    SSID =''     # Network SSID
+    KEY  =''     # Network key
 
 
     wlan = network.WINC()
     wlan.connect(SSID, key=KEY, security=wlan.WPA_PSK)
     print(wlan.ifconfig())
 
-    HOST = '192.168.1.73'  # The server's hostname or IP address
+    HOST = '192.168.1.67'  # The server's hostname or IP address
     #PORT1 = 5012      # The port used by the server
     #PORT2 = PORT1 + 1
 
@@ -69,13 +69,12 @@ def mainf(PORT1):
     SCALE = 1
     ioctlW = int(800*SCALE)
     ioctlH = int(600*SCALE)
-    cropW = int(600/SCALE)
-    cropH = int(600/SCALE)
 
-    #ioctlW = int(2592*SCALE)
-    #ioctlH = int(1944*SCALE)
-    #cropW = int(800/SCALE)
-    #cropH = int(200/SCALE)
+    cropW = int(400/SCALE)  #SETTING FOR DEMO
+    cropH = int(150/SCALE)  #SETTING FOR DEMO
+
+    #cropW = int(200/SCALE)  #SETTING FOR FIG1
+    #cropH = int(150/SCALE)  #SETTING FOR FIG1
 
     LENGTH = 0.1
     NUM_IMAGES = 100
@@ -129,7 +128,7 @@ def mainf(PORT1):
                 sensor.ioctl(sensor.IOCTL_SET_READOUT_WINDOW, (ioX,ioY,ioctlW,ioctlH))
                 #sensor.set_windowing((0,0,cropW,cropH))
                 sensor.set_windowing((setX,setY,cropW,cropH))
-                #sensor.skip_frames(1)
+                sensor.skip_frames(1)
 
             STARTING = utime.ticks_ms()/1000
             CURRENT = 0
@@ -228,9 +227,9 @@ def mainf(PORT1):
     print(RECV)
     return end-start
 
-timee = mainf(5062)
+PORT = 7006
+mainf(PORT)
 sensor.skip_frames(time = 5000)
-#timee = mainf(5002)
 
 
 

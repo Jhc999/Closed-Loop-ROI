@@ -12,7 +12,7 @@ SSID =''     # Network SSID
 KEY  =''     # Network key
 HOST = '192.168.1.71'
 PORT1 = 9003
-testnum = 10
+testnum = 100
 
 ########################################################################
 ResKey = {}

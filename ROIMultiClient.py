@@ -36,33 +36,24 @@ def MVread(str_in):     #READ CONFIG MESSAGE SENT BY PC
 ########################################################################
 
 def main(PORT1):
-    SSID ='TELUS3061'     # Network SSID
-    KEY  ='m2gbx75frq'     # Network key
+    SSID =''     # Network SSID
+    KEY  =''     # Network key
+    HOST = '192.168.1.67'
 
+    PORT2 = PORT1+1
 
     wlan = network.WINC()
     wlan.connect(SSID, key=KEY, security=wlan.WPA_PSK)
     print(wlan.ifconfig())
 
-    HOST = '192.168.1.73'
-
-    PORT2 = PORT1+1
-    #PORT3 = PORT2+1
-    #PORT4 = PORT3+1
     s1 = usocket.socket(usocket.AF_INET, usocket.SOCK_STREAM)
     s2 = usocket.socket(usocket.AF_INET, usocket.SOCK_STREAM)
-    #s3 = usocket.socket(usocket.AF_INET, usocket.SOCK_STREAM)
-    #s4 = usocket.socket(usocket.AF_INET, usocket.SOCK_STREAM)
 
     s1.connect((HOST, PORT1))
     s2.connect((HOST, PORT2))
-    #s3.connect((HOST, PORT3))
-    #s4.connect((HOST, PORT4))
 
     s1.settimeout(2.0)   #0 is non-blocking, None is blocking
     s2.settimeout(0.04)   #0 is non-blocking, None is blocking
-    #s3.settimeout(2.0)   #0 is non-blocking, None is blocking
-    #s4.settimeout(0.04)   #0 is non-blocking, None is blocking
 
     OUT = []
     CAPT = []
@@ -273,4 +264,5 @@ def main(PORT1):
     s2.close()
     return end-start
 
-main(8000)
+PORT = 8000
+main(PORT)

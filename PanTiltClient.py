@@ -16,6 +16,18 @@ sensor.set_framesize(sensor.SXGA)
 sensor.skip_frames(time = 2000)
 
 ########################################################################
+# PARAMETERS
+
+uart = UART(3, 19200)
+
+SSID =''     # Network SSID
+KEY  =''     # Network key
+HOST = '192.168.1.69'
+PORT1 = 5026
+PORT2 = PORT1+1
+NUM_IMAGES = 500
+
+########################################################################
 
 def MVread(str_in):     #READ CONFIG MESSAGE SENT BY PC
     X = ''
@@ -35,18 +47,11 @@ def MVread(str_in):     #READ CONFIG MESSAGE SENT BY PC
 
 ########################################################################
 
-uart = UART(3, 19200)
-
-SSID ='TELUS3061'     # Network SSID
-KEY  ='m2gbx75frq'     # Network key
 print("Trying to connect... (may take a while)...")
 wlan = network.WINC()
 wlan.connect(SSID, key=KEY, security=wlan.WPA_PSK)
 print(wlan.ifconfig())
 
-HOST = '192.168.1.69'
-PORT1 = 5026
-PORT2 = PORT1+1
 s1 = usocket.socket(usocket.AF_INET, usocket.SOCK_STREAM)
 s2 = usocket.socket(usocket.AF_INET, usocket.SOCK_STREAM)
 s1.connect((HOST, PORT1))
@@ -54,7 +59,6 @@ s2.connect((HOST, PORT2))
 s1.settimeout(1.0)   #0 is non-blocking, None is blocking
 s2.settimeout(0.04)   #0 is non-blocking, None is blocking
 
-NUM_IMAGES = 500
 
 XX = 90
 YY = 170
