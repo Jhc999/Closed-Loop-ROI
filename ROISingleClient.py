@@ -33,8 +33,8 @@ def MVread(str_in):     #READ CONFIG MESSAGE SENT BY PC
 ########################################################################
 
 def mainf(PORT1):
-    SSID =''     # Network SSID
-    KEY  =''     # Network key
+    SSID ='TELUS3061'     # Network SSID
+    KEY  ='m2gbx75frq'     # Network key
 
 
     wlan = network.WINC()
@@ -227,7 +227,7 @@ def mainf(PORT1):
     print(RECV)
     return end-start
 
-PORT = 7006
+PORT = 6000
 mainf(PORT)
 sensor.skip_frames(time = 5000)
 
