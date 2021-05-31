@@ -1,6 +1,10 @@
 import sensor, image, utime, network, usocket, omv
 sensor.reset()
 
+
+########################################################################
+#PARAMETERS
+
 #RGB
 #sensor.set_pixformat(sensor.RGB565)
 
@@ -11,7 +15,7 @@ sensor.set_quality(85) #85, 90, 95
 SSID =''     # Network SSID
 KEY  =''     # Network key
 HOST = '192.168.1.71'
-PORT1 = 9003
+PORT1 = 8000
 testnum = 100
 
 ########################################################################
