@@ -52,7 +52,7 @@ This repository provides the code to replicate all the demos and figures in the 
 
 ## Pan & Tilt Method
 
-* Upload `ServoControl.ino` to the Arduino Uno. Connect pins between the OpenMV and Arduino listed in `PanTiltClient.py`. 
+* Upload `servo_control.ino` to the Arduino Uno. Connect pins between the OpenMV and Arduino listed in `PanTiltClient.py`. 
 * Enter the SSID, password, and IP address of the Jetson to `PanTiltServer.py`. 
 * Run `PanTiltClient.py` first, then run `PanTiltServer.py` either by flashing directly to the OpenMV or by connecting the OpenMV to the IDE. 
 * Note that displaying the video stream on `PanTiltServer.py` will reduce the FPS of the video.
