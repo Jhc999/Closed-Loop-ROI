@@ -39,6 +39,7 @@ This repository provides the code to replicate all the demos and figures in the 
 
 ## Notes
 
+* The model weights are available at DROPBOX LINK. For MobileNet, download `NAME` and place into `Directory`. For MTCNN, download `NAME` and place into `Directory`. For YoloV4, fownload `NAME` and place into `Directory`.
 * For reproducing figures from the paper, the serial port should be connected to the OpenMV IDE on an external PC. Data for the figures is printed directly to the serial port and read by the IDE to later be plotted. 
 * For the demos of streaming methods OpenMV, the serial port connection is not necessary, and scripts can be flashed directly onto the OpenMV. However, the serial port connection will display the captured images in the OpenMV IDE without the need to save the images (which reduces the FPS).
 * After running a script once that requires a wireless connection, the TCP socket will be blocked. The socket can usually be cleared by running ClearPort.py. If this does not work, the port numbers for the TCP socket must be changed inside the scripts.
@@ -93,10 +94,9 @@ This repository provides the code to replicate all the demos and figures in the 
 
 ## Figure 8
 
-* The model weights are available at: https://github.com/jkjung-avt/tensorrt_demos. 
-* For face detection with MobileNet, run `Fig8_MobileNet.py` on the Jetson. Download `NAME` and place into `Directory`.
-* For face detection with MTCNN, run `Fig8_MTCNN.py` on the Jetson. Download `NAME` and place into `Directory`.
-For face detection with MobileNet, run `Fig8_YoloV4.py` on the Jetson. Download `NAME` and place into `Directory`.
+* For face detection with MobileNet, run `Fig8_MobileNet.py` on the Jetson. 
+* For face detection with MTCNN, run `Fig8_MTCNN.py` on the Jetson. 
+* For face detection with YoloV4, run `Fig8_YoloV4.py` on the Jetson. 
 
 ## Figure 9
 

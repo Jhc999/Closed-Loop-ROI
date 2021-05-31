@@ -5,13 +5,14 @@ sensor.reset()
 #sensor.set_pixformat(sensor.RGB565)
 
 #JPEG
-#sensor.set_pixformat(sensor.JPEG)
-#sensor.set_quality(80) #85, 90, 95
+sensor.set_pixformat(sensor.JPEG)
+sensor.set_quality(85) #85, 90, 95
 
-SSID ='TELUS3061'     # Network SSID
-KEY  ='m2gbx75frq'     # Network key
-HOST = '192.168.1.65'
-PORT1 = 4000
+SSID =''     # Network SSID
+KEY  =''     # Network key
+HOST = '192.168.1.71'
+PORT1 = 9003
+testnum = 10
 
 ########################################################################
 ResKey = {}
@@ -47,20 +48,18 @@ s1.settimeout(1.0)
 
 for key in ResKey:
     s_format, W, H = ResKey[key][0], ResKey[key][1], ResKey[key][2]
-    sensor.set_quality(80)
     sensor.set_framesize(s_format)
 
     OUT=[key, W*H]
     accum = 0
 
     frame = sensor.snapshot().bytearray()
-    for i in range (0,10):
+    for i in range (0,testnum):
         F1 = utime.ticks_ms()/1000
         s1.write(frame)
         F2 = utime.ticks_ms()/1000
         accum += (F2-F1)
-        SEN_ACCUM += (F3-F2)
-        OUT.append(F3-F1)
+    OUT.append(accum/testnum)
     print(OUT)
 
 s1.close()
