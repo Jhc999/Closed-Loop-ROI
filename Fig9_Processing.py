@@ -1,14 +1,11 @@
 # Python code for Multiple Color Detection 
   
-  
 import numpy as np 
 import cv2 
 import imutils
   
-# Capturing video through webcam 
-webcam = cv2.VideoCapture("VGA_NEW.mp4") 
+webcam = cv2.VideoCapture("Video.mp4") 
   
-# Start a while loop
 LocationX = []
 LocationY = []
 

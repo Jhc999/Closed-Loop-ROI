@@ -11,9 +11,11 @@ import os
 import signal
 from imutils import face_utils
 
+#########################################################################
+#MODIFY PARAMETERS
+
 HOST = '192.168.1.65'  # Standard loopback interface address (localhost)
-#PORT1 = 5000         # Port to listen on (non-privileged ports are > 1023)
-#PORT2 = PORT1 + 1
+PORTNUM = 8000
 
 #########################################################################
 def PCread(str_in):     #READ CONFIG MESSAGE SENT BY OPENMV
@@ -150,13 +152,9 @@ def main(PORT1, detector, resize, NUM_IMAGES):
             OMVoffy = (-1)*(OMVoffy-6000)
 
         recvE = time.time()
-
-        #print("RECVtime", i, recvE-recvS)
         
         #DECODE
         jpegIMG = buffer[configSize:]
-
-        
 
         F1 = time.time()
         image = Image.open(io.BytesIO(jpegIMG))
@@ -176,11 +174,7 @@ def main(PORT1, detector, resize, NUM_IMAGES):
         #cv2.waitKey(1)
         
         print("IO", F2-F1, "RGB", F3-F2, "CV2", F4-F3)
-        #gray = cv2.cvtColor(opencv_img, cv2.COLOR_BGR2GRAY)
-	    #faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-        #h, w, _ = opencv_img.shape
-        
-        
+
         if detector == "mobile":
             D1 = time.time()
             bbox = face_detector.forward(im_bgr)
@@ -252,9 +246,6 @@ def main(PORT1, detector, resize, NUM_IMAGES):
         else:
             DETECTION = "YES"
             Bleft, Btop, Bright, Bbot = bbox[0][0], bbox[0][1], bbox[0][2], bbox[0][3] 
-                            
-            #LocationX.append(int(Bleft))   #*800/2592
-            #LocationY.append(int(Btop))    #*800/2592
 
             LocationX.append(int(Bleft)*800/2592)   
             LocationY.append(int(Btop)*800/2592)    
@@ -264,11 +255,6 @@ def main(PORT1, detector, resize, NUM_IMAGES):
             if offy < 0:
                 offy = (-1)*offy + 6000 
                 
-            #INFO = [i, offx, offy, Bleft, Btop, Bright, Bbot, Bconf]
-            #print(INFO)
-
-        #offx = i #CHECK LAG
-        #offy = 0
         confirm = str(offx)+","+str(offy)+","
         
         conn2.send(confirm.encode()+bytearray(10-len(confirm)))
@@ -285,16 +271,10 @@ def main(PORT1, detector, resize, NUM_IMAGES):
     conn2.close()
     return(END-START)
 
-#detector = "mobile"
-#detector = "yolo"
-#detector = "mtcnn"
-#detector = "ssd"
 detector = "color"
-#detector = "blank"
 resize = False
-NUM_IMAGES = 100 #SVGA
-#NUM_IMAGES = 20  #WQXGA2
-main(6028, detector, resize, NUM_IMAGES)
+NUM_IMAGES = 100 
+main(PORTNUM, detector, resize, NUM_IMAGES)
 
-	
+
 

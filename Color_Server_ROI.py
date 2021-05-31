@@ -11,9 +11,11 @@ import os
 import signal
 from imutils import face_utils
 
+#########################################################################
+#PARAMETERS
+
 HOST = '192.168.1.65'  # Standard loopback interface address (localhost)
-#PORT1 = 5000         # Port to listen on (non-privileged ports are > 1023)
-#PORT2 = PORT1 + 1
+PORTNUM = 5000
 
 #########################################################################
 def PCread(str_in):     #READ CONFIG MESSAGE SENT BY OPENMV
@@ -304,15 +306,10 @@ def main(PORT1, detector, resize, NUM_IMAGES):
     conn2.close()
     return(END-START)
 
-#detector = "mobile"
-#detector = "yolo"
-#detector = "mtcnn"
-#detector = "ssd"
 detector = "color"
-#detector = "blank"
 resize = False
 NUM_IMAGES = 400
-main(5004, detector, resize, NUM_IMAGES)
+main(PORTNUM, detector, resize, NUM_IMAGES)
 
-	
+
 
