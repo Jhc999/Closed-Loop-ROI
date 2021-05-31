@@ -106,11 +106,6 @@ This repository provides the code to replicate all the demos and figures in the 
 * For the ROI method, follow the same steps as the single ROI demo. However, change the ROI dimension in `ROISingleClient.py` from 400x150 pixels to 200x200 and  use with `ROISingleServer.py`. 
 * Process the videos using `Fig9_Processing.py`.
 
-## Plotting Figures
-
-* The `FigurePlot.ipynb` notebook contains the raw data used to plot all figures in the paper. 
-* The data outputs of the previous scripts have been cleaned up into the appropriate format for the notebook.
-
 ## Helper Scripts
 
 * `ClearPorts.py` clears an open port. Ports may be blocked after running a script that opens a TCP connection.
