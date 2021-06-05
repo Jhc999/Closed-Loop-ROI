@@ -81,7 +81,7 @@ This repository provides the code to replicate all the demos and figures in the 
 ## Figure 5
 
 * Connect the OpenMV to the OpenMV IDE over serial.
-* Run `Fig5_Part1.py` (for resolultions below SVGA) and `Fig5_Part2.py` (for resolutions above SVGA) to generate data to be plotted.
+* Run `Fig5.py` to generate data to be plotted.
 
 ## Figure 6 
 
