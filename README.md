@@ -1,6 +1,6 @@
 # Closed-loop Region of Interest Enabling High Spatial and Temporal Resolutions in Object Detection and Tracking via Wireless Camera
 
-Journal Paper in IEEE Access, Volume #, 2021: LINK
+Journal Paper in IEEE Access, Volume 9, 2021: https://ieeexplore.ieee.org/document/9454528
 
 Authors: Jack Chen<sup>*1,2</sup>, Hen-Wei Huang<sup>*1,3,4</sup>, Philipp Rupp<sup>1,5</sup>, Anjali Sinha<sup>4</sup>, Claas Ehmke<sup>3</sup>, and Giovanni Traverso<sup>1,4</sup>
 
